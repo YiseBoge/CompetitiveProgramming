@@ -12,22 +12,18 @@ def flip(A, k):
 
 def pancake_sort(A):
     flips = []
-    current = -1
+    maximum = len(A)
+    largest = max(A)
 
-    l = A
-    smallest = l[0]
-    largest = l[len(l) - 1]
-
-    i = 0
-    while i < (len(l)):
-        if (current == 1 and l[i] == largest) or (current == -1 and l[i] == smallest):
-            l = flip(l, i + 1)
-            flips += [i + 1]
-            i = 0
-            current *= -1
-        else:
-            i += 1
-        print(l)
+    while maximum > 0:
+        for i in range(maximum):
+            if A[i] == largest:
+                A = flip(A, i + 1)
+                A = flip(A, maximum)
+                flips += [i + 1, maximum]
+                maximum -= 1
+                largest = max(A[0:maximum]) if maximum > 0 else 0
+                break
     return flips
 
 
