@@ -1,5 +1,5 @@
-import sys
 import random
+import sys
 import time
 
 
@@ -45,6 +45,20 @@ def merge_sort(the_list):
     else:
         half = size // 2
         return __merge(merge_sort(the_list[0:half]), merge_sort(the_list[half:]))
+
+
+def quick_sort(unsorted):
+    if len(unsorted) < 2:
+        return unsorted
+    index = unsorted.pop()
+    list1 = []
+    list2 = []
+    for i in unsorted:
+        if index > i:
+            list1.append(i)
+        elif index <= i:
+            list2.append(i)
+    return quick_sort(list1) + [index] + quick_sort(list2)
 
 
 def insertion_sort(the_list):
@@ -104,6 +118,7 @@ def solution(unsorted):
     # return insertion_sort(unsorted)
     # return selection_sort(unsorted)
     # return merge_sort(unsorted)
+    # return quick_sort(unsorted)
     return counting_sort(unsorted)
 
 
