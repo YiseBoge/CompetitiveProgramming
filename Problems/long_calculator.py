@@ -193,7 +193,7 @@ def solution(in1, operator, in2):
             result = subtract(big, small)
         elif negative1 and negative2:
             negative_result = __compare(clean1, clean2) > 0
-            result = add(big, small)
+            result = subtract(big, small)
         elif negative1:
             negative_result = True
             result = add(big, small)
