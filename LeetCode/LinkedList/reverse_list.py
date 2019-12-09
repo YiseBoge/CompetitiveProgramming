@@ -1,16 +1,5 @@
 from LeetCode.LinkedList.__list_node import ListNode
-
-
-def print_list(lst: ListNode):
-    l = lst
-    result = "["
-    while l is not None and l.next is not None:
-        result += (str(l.val) + ", ")
-        l = l.next
-
-    result += (str(l.val) + "]") if l is not None else "]"
-
-    print(result)
+from LeetCode.LinkedList.__list_node import print_list
 
 
 def reverse_list(head):
@@ -33,6 +22,7 @@ def main():
     # inp1 = sys.stdin.readline().split()
     # inp2 = sys.stdin.readline().split()
     inp1 = ListNode(4)
+    inp1.next = ListNode(1)
     print_list(solution(inp1))
 
 
