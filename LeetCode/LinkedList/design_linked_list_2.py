@@ -1,7 +1,4 @@
-class ListNode:
-    def __init__(self, value):
-        self.val = value
-        self.next = None
+from LeetCode.LinkedList.list_node import ListNode
 
 
 def print_list(lst):
