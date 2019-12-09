@@ -1,16 +1,7 @@
-def print_list(lst):
-    l = lst
-    result = "["
-    while l.next is not None:
-        result += (str(l.val) + ", ")
-        l = l.next
-
-    result += (str(l.val) + "]") if l.val is not None else "]"
-
-    print(result)
+from LeetCode.LinkedList.__list_node import print_list
 
 
-class MyLinkedList:
+class ListNode:
 
     def __init__(self):
         self.val = None
@@ -32,7 +23,7 @@ class MyLinkedList:
         if self.val is None:
             self.val = val
         else:
-            l = MyLinkedList()
+            l = ListNode()
             l.val = self.val
             l.next = self.next
             self.next = l
@@ -47,7 +38,7 @@ class MyLinkedList:
         else:
             while h.next is not None:
                 h = h.next
-            n = MyLinkedList()
+            n = ListNode()
             n.val = val
             h.next = n
 
@@ -59,7 +50,7 @@ class MyLinkedList:
         i = 0
         while h.next is not None:
             if i + 1 == index:
-                n = MyLinkedList()
+                n = ListNode()
                 n.val = val
                 n.next = h.next
                 h.next = n
@@ -91,7 +82,7 @@ class MyLinkedList:
 
 
 if __name__ == '__main__':
-    obj = MyLinkedList()
+    obj = ListNode()
     index = 0
     obj.deleteAtIndex(index)
     print_list(obj)

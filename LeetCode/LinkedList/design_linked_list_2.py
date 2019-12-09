@@ -1,16 +1,5 @@
-from LeetCode.LinkedList.list_node import ListNode
-
-
-def print_list(lst):
-    l = lst.head
-    result = "["
-    while l is not None and l.next is not None:
-        result += (str(l.val) + ", ")
-        l = l.next
-
-    result += (str(l.val) + "]") if l is not None else "]"
-
-    print(result)
+from LeetCode.LinkedList.__list_node import ListNode
+from LeetCode.LinkedList.__list_node import print_list
 
 
 class MyLinkedList:
@@ -94,44 +83,44 @@ if __name__ == '__main__':
     obj = MyLinkedList()
     index = 0
     obj.deleteAtIndex(index)
-    print_list(obj)
+    print_list(obj.head)
 
     index = 0
     print(obj.get(index))
 
     val = 10
     obj.addAtHead(val)
-    print_list(obj)
+    print_list(obj.head)
 
     index = 0
     val = 2
     obj.addAtIndex(index, val)
-    print_list(obj)
+    print_list(obj.head)
 
     index = 1
     val = 1
     obj.addAtIndex(index, val)
-    print_list(obj)
+    print_list(obj.head)
 
     index = 10
     val = 3
     obj.addAtIndex(index, val)
-    print_list(obj)
+    print_list(obj.head)
 
     val = 4
     obj.addAtTail(val)
-    print_list(obj)
+    print_list(obj.head)
     val = 5
     obj.addAtTail(val)
-    print_list(obj)
+    print_list(obj.head)
 
     index = 0
     obj.deleteAtIndex(index)
-    print_list(obj)
+    print_list(obj.head)
 
     val = 4
     obj.addAtTail(val)
-    print_list(obj)
+    print_list(obj.head)
 
     index = 0
     print(obj.get(index))
