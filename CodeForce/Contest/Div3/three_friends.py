@@ -35,7 +35,7 @@ def main():
         inputs = list(map(int, input().split()))
         result.append(solution(inputs))
 
-    print(*result, sep="\n", end="")
+    print(*result, sep="\n")
 
 
 if __name__ == "__main__":

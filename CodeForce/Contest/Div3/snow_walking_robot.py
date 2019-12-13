@@ -56,7 +56,7 @@ def main():
         if int(s[0]) > 0:
             result.append(s[1])
 
-    print(*result, sep="\n", end="")
+    print(*result, sep="\n")
 
 
 if __name__ == "__main__":

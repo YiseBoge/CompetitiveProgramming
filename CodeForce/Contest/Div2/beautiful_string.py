@@ -41,7 +41,7 @@ def main():
     for i in range(length):
         result += [solution(input())]
 
-    print(*result, sep="\n", end="")
+    print(*result, sep="\n")
 
 
 if __name__ == "__main__":
