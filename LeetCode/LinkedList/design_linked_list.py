@@ -1,4 +1,4 @@
-from LeetCode.LinkedList.__list_node import print_list
+from LeetCode.LinkedList.__list_node__ import print_list
 
 
 class ListNode:

@@ -1,5 +1,5 @@
-from LeetCode.LinkedList.__list_node import ListNode
-from LeetCode.LinkedList.__list_node import print_list
+from LeetCode.LinkedList.__list_node__ import ListNode
+from LeetCode.LinkedList.__list_node__ import print_list
 
 
 def reverse_list(head):
