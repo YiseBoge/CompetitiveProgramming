@@ -38,6 +38,7 @@ def main():
     inp1 = TreeNode(4)
     inp2 = TreeNode(5)
     inp3 = TreeNode(2)
+
     inp1.left = inp2
     inp2.right = inp3
 
