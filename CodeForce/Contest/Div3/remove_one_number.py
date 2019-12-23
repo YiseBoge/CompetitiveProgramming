@@ -1,31 +1,32 @@
 def find_maximum(original, length):
     maximum = 1
     count = 1
-    removed = False
-    sized = False
+    removed = -1
 
-    for i in range(1, length):
-        size = 2 if sized else 1
+    i = 1
+    while i < length:
+        size = 2 if removed == i - 1 else 1
         # print("maximum:" + str(i))
         # print("i:" + str(i))
         # print("comparing: " + str(original[i-size]) + " with " + str(original[i]))
         if original[i] - original[i - size] == 1:
             count += 1
-            sized = False if sized else sized
         else:
             # print("one:" + str(i < (length - 1)))
             # print("two:" + str(not removed))
             # print("three:" + str(original[i+1] - original[i-1] == 1))
-            if i < length - 1 and not removed and original[i + 1] - original[i - 1] == 1:
+            if i < length - 1 and removed < 0 and original[i + 1] - original[i - 1] == 1:
                 # print("three:" + str(original[i+1] - original[i-1] == 1))
-                i += 1
-                removed = True
-                sized = True
+                removed = i
             else:
                 maximum = count if count > maximum else maximum
                 count = 1
-                removed = False
-                sized = False
+                if removed > 0:
+                    i = removed + 1
+                    removed = -1
+                    continue
+                removed = -1
+        i += 1
 
     maximum = count if count > maximum else maximum
 
