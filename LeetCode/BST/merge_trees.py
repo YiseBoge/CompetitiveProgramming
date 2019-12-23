@@ -1,7 +1,6 @@
 from typing import Optional
 
 from LeetCode.BST.__tree_node__ import TreeNode
-from LeetCode.BST.__tree_node__ import print_tree
 
 
 class Solution:
@@ -43,7 +42,7 @@ def main():
     inp1.left = inp2
     inp3.right = inp4
 
-    print_tree(solution(inp1, inp2))
+    print(solution(inp1, inp2))
 
 
 if __name__ == '__main__':

@@ -5,10 +5,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
-def print_tree(root):
-    if root is None:
-        return
-    print(root.val)
-    print_tree(root.left)
-    print_tree(root.right)
+    def __str__(self):
+        returnable = "Node{val=" + str(self.val) + ", left=" + str(self.left) + ", right=" + str(self.right) + "}"
+        return returnable
