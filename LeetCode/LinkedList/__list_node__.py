@@ -3,14 +3,6 @@ class ListNode:
         self.val = value
         self.next = None
 
-
-def print_list(lst: ListNode):
-    l = lst
-    result = "["
-    while l is not None and l.next is not None:
-        result += (str(l.val) + ", ")
-        l = l.next
-
-    result += (str(l.val) + "]") if l is not None else "]"
-
-    print(result)
+    def __str__(self):
+        returnable = str(self.val) + " -> " + str(self.next)
+        return returnable

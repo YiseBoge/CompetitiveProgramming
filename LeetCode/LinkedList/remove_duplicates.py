@@ -1,5 +1,4 @@
 from LeetCode.LinkedList.__list_node__ import ListNode
-from LeetCode.LinkedList.__list_node__ import print_list
 
 
 def remove_duplicates(head):
@@ -20,7 +19,7 @@ def main():
     inp1 = ListNode(0)
     inp1.next = ListNode(1)
     inp1.next.next = ListNode(1)
-    print_list(solution(inp1))
+    print(solution(inp1))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,4 @@
 from LeetCode.LinkedList.__list_node__ import ListNode
-from LeetCode.LinkedList.__list_node__ import print_list
 
 
 class MyLinkedList:
@@ -83,44 +82,44 @@ if __name__ == '__main__':
     obj = MyLinkedList()
     index = 0
     obj.deleteAtIndex(index)
-    print_list(obj.head)
+    print(obj.head)
 
     index = 0
     print(obj.get(index))
 
     val = 10
     obj.addAtHead(val)
-    print_list(obj.head)
+    print(obj.head)
 
     index = 0
     val = 2
     obj.addAtIndex(index, val)
-    print_list(obj.head)
+    print(obj.head)
 
     index = 1
     val = 1
     obj.addAtIndex(index, val)
-    print_list(obj.head)
+    print(obj.head)
 
     index = 10
     val = 3
     obj.addAtIndex(index, val)
-    print_list(obj.head)
+    print(obj.head)
 
     val = 4
     obj.addAtTail(val)
-    print_list(obj.head)
+    print(obj.head)
     val = 5
     obj.addAtTail(val)
-    print_list(obj.head)
+    print(obj.head)
 
     index = 0
     obj.deleteAtIndex(index)
-    print_list(obj.head)
+    print(obj.head)
 
     val = 4
     obj.addAtTail(val)
-    print_list(obj.head)
+    print(obj.head)
 
     index = 0
     print(obj.get(index))

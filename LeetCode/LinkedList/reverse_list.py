@@ -1,5 +1,4 @@
 from LeetCode.LinkedList.__list_node__ import ListNode
-from LeetCode.LinkedList.__list_node__ import print_list
 
 
 def reverse_list(head):
@@ -23,7 +22,7 @@ def main():
     # inp2 = sys.stdin.readline().split()
     inp1 = ListNode(4)
     inp1.next = ListNode(1)
-    print_list(solution(inp1))
+    print(solution(inp1))
 
 
 if __name__ == '__main__':

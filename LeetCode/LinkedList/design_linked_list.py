@@ -1,6 +1,3 @@
-from LeetCode.LinkedList.__list_node__ import print_list
-
-
 class ListNode:
 
     def __init__(self):
@@ -85,7 +82,7 @@ if __name__ == '__main__':
     obj = ListNode()
     index = 0
     obj.deleteAtIndex(index)
-    print_list(obj)
+    print(obj)
 
     index = 0
     print(obj.get(index))
@@ -97,16 +94,16 @@ if __name__ == '__main__':
     val = 3
     obj.addAtTail(val)
 
-    print_list(obj)
+    print(obj)
 
     index = 1
     val = 2
     obj.addAtIndex(index, val)
-    print_list(obj)
+    print(obj)
 
     index = 0
     obj.deleteAtIndex(index)
-    print_list(obj)
+    print(obj)
 
     index = 3
     print(obj.get(index))

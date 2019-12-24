@@ -1,5 +1,4 @@
 from LeetCode.LinkedList.__list_node__ import ListNode
-from LeetCode.LinkedList.__list_node__ import print_list
 
 
 def delete_node(node):
@@ -19,7 +18,7 @@ def main():
     inp2.next = inp3
 
     solution(inp2)
-    print_list(inp1)
+    print(inp1)
 
 
 if __name__ == '__main__':
