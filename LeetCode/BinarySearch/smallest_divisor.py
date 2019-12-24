@@ -9,8 +9,6 @@ class Solution:
     def smallFinder(self, nums, threshold, start, finish):
         middle = (finish + start) // 2
 
-        print("checking", middle)
-
         if self.getSum(nums, middle) > threshold:
             if self.getSum(nums, middle + 1) <= threshold:
                 return middle + 1
@@ -40,7 +38,7 @@ def main():
     # inp1 = sys.stdin.readline().split()
     # inp2 = sys.stdin.readline().split()
 
-    inp1 = [-1, 0, 3, 5, 9, 12]
+    inp1 = [2, 3, 5, 7, 11]
     inp2 = 10
     sys.stdout.write(str(solution(inp1, inp2)))
 
