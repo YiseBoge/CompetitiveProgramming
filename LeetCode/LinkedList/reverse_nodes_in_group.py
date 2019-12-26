@@ -45,8 +45,6 @@ def solution(l1, l2):
 
 
 def main():
-    # inp1 = sys.stdin.readline().split()
-    # inp2 = sys.stdin.readline().split()
     inp1 = ListNode(1)
     inp1.next = ListNode(2)
     inp1.next.next = ListNode(3)
