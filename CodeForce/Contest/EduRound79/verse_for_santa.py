@@ -1,24 +1,14 @@
 def count_verses(verses, length, maximum):
-    verses_count = 0
     biggest_index = 0
 
-    for i in range(length):
-        if maximum < verses[i]:
-            break
-        verses_count += 1
+    i = 0
+    while i < length and maximum >= 0:
         biggest_index = i if verses[i] > verses[biggest_index] else biggest_index
         maximum -= verses[i]
+        i += 1
 
-    # print(verses_count)
-    # print(maximum)
-    # print("hope is:", maximum + verses[biggest_index])
-    # print("currently at:", verses[verses_count])
-    if 0 <= verses_count < length:
-        if maximum + verses[biggest_index] > verses[verses_count]:
-            return biggest_index + 1
-        elif verses_count < length - 1 and maximum + verses[verses_count] >= verses[verses_count] + 1:
-            return verses_count + 1
-
+    if maximum < 0:
+        return biggest_index + 1
     return 0
 
 
