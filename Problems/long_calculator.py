@@ -151,6 +151,33 @@ def divide(big, small):
     return __clean_zeros(result)
 
 
+def cut_num(number: str, divisor: str):
+    for i in range(1, len(number)):
+        cut_string = number[:i]
+        remaining_string = number[i:]
+
+        if int(cut_string) >= int(divisor):
+            return cut_string, remaining_string
+
+    return number, ""
+
+
+def long_divide(numerator: str, denominator: str, result: str):
+    if int(numerator) < int(denominator):
+        return result, numerator
+
+    cut_number, remaining = cut_num(numerator, denominator)
+
+    print(cut_num, remaining)
+
+    quotient = int(cut_number) // int(denominator)
+    reminder = int(cut_number) % int(denominator)
+
+    result += str(quotient)
+    remaining = str(reminder) + remaining
+    return long_divide(remaining, denominator, result)
+
+
 def solution(in1, operator, in2):
     # return __complement(in1, 5)
     # return __increment(in1)
