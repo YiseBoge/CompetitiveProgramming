@@ -4,7 +4,6 @@ from LeetCode.BST.__tree_node__ import TreeNode
 class Solution:
     def find_bottom_left_value(self, root: TreeNode) -> int:
         start_level = 0
-        start_val = root.val
         r = self.look_for_lower(root, start_level)
         return r[0]
 
