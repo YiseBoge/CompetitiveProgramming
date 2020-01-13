@@ -1,21 +1,12 @@
 def is_yasser_happy(length, tastiness):
     total = sum(tastiness)
-    count = total
+    count = 0
 
-    start = 0
-    end = length - 1
-    while True:
-        if tastiness[start] <= tastiness[end]:
-            count -= tastiness[start]
-            start += 1
-        else:
-            count -= tastiness[end]
-            end -= 1
-
-        if count >= total:
+    for i in range(length - 1):
+        count += tastiness[i]
+        if count <= 0 or count >= total:
             return "NO"
-        if start > end:
-            return "YES"
+    return "YES"
 
 
 def solution(inp1, inp2):
