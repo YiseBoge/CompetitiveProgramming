@@ -21,6 +21,12 @@ def solution(num):
 def main():
     while True:
         inp = input()
+        if inp == "exit" or inp == "stop":
+            break
+
+        if int(inp) < 2:
+            print("Input has to be bigger than 2")
+            continue
         print(solution(int(inp)))
 
 
