@@ -25,8 +25,6 @@ def solution(l1, l2):
 
 
 def main():
-    # inp1 = sys.stdin.readline().split()
-    # inp2 = sys.stdin.readline().split()
 
     inp1 = [1, 2, 3, 1]
     inp2 = 3
