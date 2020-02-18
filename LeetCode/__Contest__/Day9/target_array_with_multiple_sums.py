@@ -9,17 +9,23 @@ class Solution:
         heapq.heapify(heap)
         total = sum(target)
 
-        while True:
+        while len(heap) > 1:
             if heap[0] == -1:
                 return True
             current = -heapq.heappop(heap)
             reducable = total - current
-            current = current - reducable
+            if reducable == 1:
+                return True
+            if current <= reducable:
+                return False
+            current = current % reducable
             total = reducable + current
             # print(heap, current, total)
             if current < 1:
                 return False
             heapq.heappush(heap, -current)
+
+        return target[0] == 1
 
 
 def solution(l1):
