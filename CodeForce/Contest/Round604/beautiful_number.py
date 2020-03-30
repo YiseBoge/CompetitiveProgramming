@@ -1,10 +1,3 @@
-def get_val(before, after):
-    letters = ['a', 'b', 'c']
-    for i in letters:
-        if i != before and i != after:
-            return i
-
-
 def check_beautiful(perm):
     pos = [0 for i in range(len(perm) + 1)]
     for i in range(len(perm)):
